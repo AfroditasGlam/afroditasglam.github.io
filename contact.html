@@ -140,30 +140,50 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="contact-form rounded p-5">
-                            <form>
-                                    <h1 class="display-6 mb-4">¿Tienes alguna pregunta?</h1>
-                                <div class="row gx-4 gy-3">
-                                    <div class="col-xl-6">
-                                        <input type="text" class="form-control bg-white border-0 py-3 px-4" placeholder="Nombre Completo">
-                                    </div>
-                                    <div class="col-xl-6">
-                                        <input type="email" class="form-control bg-white border-0 py-3 px-4" placeholder="Email">
-                                    </div>
-                                    <div class="col-xl-6">
-                                        <input type="text" class="form-control bg-white border-0 py-3 px-4" placeholder="Numero de Telefono">
-                                    </div>
-                                    <div class="col-xl-6">
-                                        <input type="text" class="form-control bg-white border-0 py-3 px-4" placeholder="Sugerencias">
-                                    </div>
-                                    <div class="col-12">
-                                        <textarea class="form-control bg-white border-0 py-3 px-4" rows="4" cols="10" placeholder="Mensaje"></textarea>
-                                    </div>
-                                    <div class="col-12">
-                                        <a href="https://wa.me/573112415742?text=Hola,%20Quiero%20realizarme%20un%20servicio" class="btn btn-primary btn-primary-outline-0 w-100 py-3 px-5">Hacer Reserva</a>
-                                        
-                                    </div>
-                                </div>
-                            </form>
+
+                            <h1 class="display-6 mb-4">¿Tienes alguna consulta?</h1>
+
+
+                            <form action="#" class="form-group">
+     <div class="form-group mb-3">
+         <input type="text" id="name" class="form-control" placeholder="Nombre" required>
+     </div>
+     <div class="form-group mb-3">
+         <input type="email" id="email" class="form-control" placeholder="Email" required>
+     </div>
+     <div class="form-group mb-3">
+         <input type="text" id="phone" class="form-control" placeholder="Numero de Teléfono" required>
+     </div>
+      
+     <div class="form-group mb-3">
+         <textarea id="message" cols="30" rows="5" class="form-control" placeholder="Mensaje"></textarea>
+     </div>
+     <div class="text-end">
+         <button type="button" class="btn btn-primary btn-primary-outline-0 w-100 py-3 px-5" onclick="whatsapp();">Contáctanos</button>
+         
+     </div>
+ </form>
+              <script>
+function whatsapp(){
+var name = document.getElementById("name").value;
+var email = document.getElementById("email").value;
+var phone = document.getElementById("phone").value;
+
+var message = document.getElementById("message").value;
+  
+var url = "https://wa.me/573112415742?text="
++"*Nombre :* "+name+"%0a"
++"*Email :* "+email+"%0a"
++"*Teléfono :* "+phone+"%0a"
+
++"*Mensaje :* "+message;
+  
+window.open(url,'_blank').focus();
+}
+</script>
+
+
+                            
                         </div>
                     </div>
                 </div>
@@ -315,4 +335,5 @@
 
 
 </html>
+
 
