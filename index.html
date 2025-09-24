@@ -340,34 +340,47 @@
                         <div class="appointment-form p-5">
 
                             <h1 class="display-4 mb-4 text-white">Agenda tu cita</h1>
-                            <form>
-                                <div class="row gy-3 gx-4">
-                                    <div class="col-lg-6">
-                                        <input type="text" class="form-control py-3 border-white bg-transparent text-white" placeholder="Nombre">
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <input type="email" class="form-control py-3 border-white bg-transparent text-white" placeholder="Correo">
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <select class="form-select py-3 border-white bg-transparent" aria-label="Default select example">
-                                            <option selected>Menu de selección</option>
-                                            <option value="1">uno</option>
-                                            <option value="2">Dos</option>
-                                            <option value="3">Tres</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <input type="date" class="form-control py-3 border-white bg-transparent">
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <textarea class="form-control border-white bg-transparent text-white" name="text" id="area-text" cols="30" rows="5" placeholder="Comentarios"></textarea>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <a href="https://wa.me/573112415742?text=Hola,%20estoy%20interesado%20en%20un%20servicio"><button type="button" class="btn btn-primary btn-primary-outline-0 w-100 py-3 px-5">ENVIAR</button></a>
-                                        
-                                    </div>
-                                </div>
-                            </form>
+
+                            <form action="#" class="form-group">
+     <div class="form-group mb-3">
+         <input type="text" id="name" class="form-control" placeholder="Nombre" required>
+     </div>
+     <div class="form-group mb-3">
+         <input type="email" id="email" class="form-control" placeholder="Email" required>
+     </div>
+     <div class="form-group mb-3">
+         <input type="text" id="phone" class="form-control" placeholder="Numero de Teléfono" required>
+     </div>
+      
+     <div class="form-group mb-3">
+         <textarea id="message" cols="30" rows="5" class="form-control" placeholder="Mensaje"></textarea>
+     </div>
+     <div class="text-end">
+         <button type="button" class="btn btn-primary btn-primary-outline-0 w-100 py-3 px-5" onclick="whatsapp();">Contáctanos</button>
+         
+     </div>
+ </form>
+              <script>
+function whatsapp(){
+var name = document.getElementById("name").value;
+var email = document.getElementById("email").value;
+var phone = document.getElementById("phone").value;
+
+var message = document.getElementById("message").value;
+  
+var url = "https://wa.me/573112415742?text="
++"*Nombre :* "+name+"%0a"
++"*Email :* "+email+"%0a"
++"*Teléfono :* "+phone+"%0a"
+
++"*Mensaje :* "+message;
+  
+window.open(url,'_blank').focus();
+}
+</script>
+
+
+                            
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -888,6 +901,7 @@
 
 
 </html>
+
 
 
 
